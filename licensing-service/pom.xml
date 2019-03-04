@@ -10,6 +10,7 @@
     <name>Eagle Eye Licensing Service</name>
     <description>Licensing Service</description>
 
+    <!-- 告诉 Maven 包含Spring Boot起步包依赖项-->
     <parent>
          <groupId>org.springframework.boot</groupId>
           <artifactId>spring-boot-starter-parent</artifactId>
@@ -18,10 +19,12 @@
            <!-- lookup parent from repository -->
     </parent>
     <dependencies>
+        <!-- Spring Boot Web 依赖项-->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
+        <!-- Spring Boot actuator 依赖项-->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-actuator</artifactId>
@@ -79,6 +82,7 @@
                    </resources>
                </configuration>
            </plugin>
+           <!-- 构建和部署 Spring Boot应用的插件-->
            <plugin>
                <groupId>org.springframework.boot</groupId>
                <artifactId>spring-boot-maven-plugin</artifactId>
